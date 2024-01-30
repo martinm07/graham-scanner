@@ -1,0 +1,38 @@
+{
+  "name": "graham-scanner",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/martinm07/graham-scanner"
+  },
+  "author": {
+    "email": "martin.github07@gmail.com",
+    "name": "Martin Molnar"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/graham-scanner.umd.cjs",
+  "module": "./dist/graham-scanner.js",
+  "exports": {
+    ".": {
+      "import": "./dist/graham-scanner.js",
+      "require": "./dist/graham-scanner.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.2.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.2",
+    "vitest": "^1.2.2"
+  }
+}

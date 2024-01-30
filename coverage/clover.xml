@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1706626525292" clover="3.2.0">
+  <project timestamp="1706626525293" name="All files">
+    <metrics statements="198" coveredstatements="165" conditionals="49" coveredconditionals="43" methods="17" coveredmethods="14" elements="264" coveredelements="222" complexity="0" loc="198" ncloc="198" packages="1" files="3" classes="3"/>
+    <file name="GrahamScan.ts" path="C:\Users\marti\OneDrive\Desktop\Martin\projects\misc\graham-scan\src\GrahamScan.ts">
+      <metrics statements="102" coveredstatements="102" conditionals="25" coveredconditionals="25" methods="7" coveredmethods="7"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="896" type="stmt"/>
+      <line num="12" count="896" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="15" count="898" type="stmt"/>
+      <line num="16" count="898" type="cond" truecount="1" falsecount="0"/>
+      <line num="17" count="15037" type="stmt"/>
+      <line num="18" count="15037" type="cond" truecount="1" falsecount="0"/>
+      <line num="19" count="13944" type="cond" truecount="1" falsecount="0"/>
+      <line num="20" count="2275" type="stmt"/>
+      <line num="21" count="15037" type="cond" truecount="1" falsecount="0"/>
+      <line num="22" count="1125" type="stmt"/>
+      <line num="23" count="1125" type="stmt"/>
+      <line num="24" count="15037" type="stmt"/>
+      <line num="25" count="898" type="stmt"/>
+      <line num="26" count="898" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="29" count="19691" type="stmt"/>
+      <line num="30" count="19691" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="33" count="899" type="stmt"/>
+      <line num="34" count="899" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="898" type="stmt"/>
+      <line num="36" count="898" type="stmt"/>
+      <line num="37" count="898" type="stmt"/>
+      <line num="38" count="898" type="stmt"/>
+      <line num="39" count="898" type="stmt"/>
+      <line num="40" count="898" type="stmt"/>
+      <line num="41" count="898" type="stmt"/>
+      <line num="42" count="898" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="898" type="stmt"/>
+      <line num="44" count="898" type="stmt"/>
+      <line num="45" count="898" type="stmt"/>
+      <line num="46" count="898" type="stmt"/>
+      <line num="47" count="898" type="stmt"/>
+      <line num="48" count="898" type="cond" truecount="1" falsecount="0"/>
+      <line num="49" count="898" type="stmt"/>
+      <line num="50" count="898" type="stmt"/>
+      <line num="51" count="898" type="cond" truecount="1" falsecount="0"/>
+      <line num="52" count="11615" type="stmt"/>
+      <line num="53" count="11615" type="stmt"/>
+      <line num="54" count="11615" type="stmt"/>
+      <line num="55" count="11615" type="stmt"/>
+      <line num="56" count="11615" type="cond" truecount="1" falsecount="0"/>
+      <line num="57" count="19679" type="stmt"/>
+      <line num="58" count="11615" type="stmt"/>
+      <line num="59" count="11615" type="cond" truecount="1" falsecount="0"/>
+      <line num="60" count="11615" type="stmt"/>
+      <line num="61" count="11615" type="stmt"/>
+      <line num="62" count="898" type="stmt"/>
+      <line num="63" count="898" type="stmt"/>
+      <line num="64" count="898" type="stmt"/>
+      <line num="65" count="899" type="cond" truecount="1" falsecount="0"/>
+      <line num="66" count="14139" type="cond" truecount="1" falsecount="0"/>
+      <line num="67" count="13243" type="stmt"/>
+      <line num="68" count="13243" type="stmt"/>
+      <line num="69" count="13243" type="stmt"/>
+      <line num="70" count="13243" type="stmt"/>
+      <line num="71" count="13243" type="stmt"/>
+      <line num="72" count="13243" type="stmt"/>
+      <line num="73" count="13243" type="stmt"/>
+      <line num="74" count="13243" type="stmt"/>
+      <line num="75" count="13243" type="stmt"/>
+      <line num="76" count="13243" type="stmt"/>
+      <line num="77" count="13243" type="stmt"/>
+      <line num="78" count="13243" type="cond" truecount="1" falsecount="0"/>
+      <line num="79" count="2526" type="stmt"/>
+      <line num="80" count="2526" type="stmt"/>
+      <line num="81" count="2526" type="stmt"/>
+      <line num="82" count="2526" type="stmt"/>
+      <line num="83" count="2526" type="cond" truecount="1" falsecount="0"/>
+      <line num="84" count="2" type="stmt"/>
+      <line num="85" count="2" type="stmt"/>
+      <line num="86" count="2526" type="stmt"/>
+      <line num="87" count="2526" type="stmt"/>
+      <line num="88" count="2526" type="cond" truecount="1" falsecount="0"/>
+      <line num="89" count="10717" type="stmt"/>
+      <line num="90" count="10717" type="stmt"/>
+      <line num="91" count="10717" type="stmt"/>
+      <line num="92" count="10717" type="stmt"/>
+      <line num="93" count="10717" type="stmt"/>
+      <line num="94" count="10717" type="cond" truecount="1" falsecount="0"/>
+      <line num="95" count="11613" type="stmt"/>
+      <line num="96" count="11613" type="cond" truecount="1" falsecount="0"/>
+      <line num="97" count="898" type="stmt"/>
+      <line num="98" count="898" type="stmt"/>
+      <line num="99" count="898" type="stmt"/>
+      <line num="100" count="898" type="stmt"/>
+      <line num="101" count="899" type="stmt"/>
+      <line num="102" count="1" type="stmt"/>
+    </file>
+    <file name="helper.ts" path="C:\Users\marti\OneDrive\Desktop\Martin\projects\misc\graham-scan\src\helper.ts">
+      <metrics statements="70" coveredstatements="63" conditionals="23" coveredconditionals="18" methods="9" coveredmethods="7"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="9" count="142" type="stmt"/>
+      <line num="10" count="142" type="stmt"/>
+      <line num="11" count="142" type="cond" truecount="0" falsecount="1"/>
+      <line num="12" count="142" type="stmt"/>
+      <line num="13" count="142" type="stmt"/>
+      <line num="14" count="142" type="cond" truecount="1" falsecount="0"/>
+      <line num="15" count="142" type="stmt"/>
+      <line num="16" count="142" type="cond" truecount="0" falsecount="1"/>
+      <line num="17" count="142" type="stmt"/>
+      <line num="18" count="142" type="stmt"/>
+      <line num="19" count="142" type="cond" truecount="1" falsecount="0"/>
+      <line num="20" count="142" type="cond" truecount="0" falsecount="1"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="142" type="stmt"/>
+      <line num="25" count="142" type="stmt"/>
+      <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="27" count="5" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="33" count="888" type="cond" truecount="1" falsecount="0"/>
+      <line num="34" count="888" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="37" count="7" type="cond" truecount="0" falsecount="1"/>
+      <line num="38" count="7" type="stmt"/>
+      <line num="39" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="40" count="7" type="cond" truecount="0" falsecount="1"/>
+      <line num="41" count="7" type="cond" truecount="1" falsecount="0"/>
+      <line num="42" count="22" type="cond" truecount="1" falsecount="0"/>
+      <line num="43" count="22" type="stmt"/>
+      <line num="44" count="22" type="stmt"/>
+      <line num="45" count="22" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="47" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="48" count="3" type="stmt"/>
+      <line num="49" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="50" count="3" type="stmt"/>
+      <line num="51" count="3" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="54" count="3" type="stmt"/>
+      <line num="55" count="3" type="stmt"/>
+      <line num="56" count="3" type="stmt"/>
+      <line num="57" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="58" count="2087" type="cond" truecount="1" falsecount="0"/>
+      <line num="59" count="768" type="stmt"/>
+      <line num="60" count="2087" type="cond" truecount="1" falsecount="0"/>
+      <line num="61" count="1319" type="cond" truecount="1" falsecount="0"/>
+      <line num="62" count="2084" type="stmt"/>
+      <line num="63" count="2084" type="stmt"/>
+      <line num="64" count="2084" type="stmt"/>
+      <line num="65" count="2084" type="stmt"/>
+      <line num="66" count="1319" type="stmt"/>
+      <line num="67" count="2087" type="stmt"/>
+      <line num="68" count="3" type="stmt"/>
+      <line num="69" count="3" type="stmt"/>
+      <line num="70" count="3" type="stmt"/>
+    </file>
+    <file name="main.ts" path="C:\Users\marti\OneDrive\Desktop\Martin\projects\misc\graham-scan\src\main.ts">
+      <metrics statements="26" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="0" type="stmt"/>
+      <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
