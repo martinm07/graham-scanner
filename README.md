@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./img/graham-scanner-dark.png">
-    <img alt="graham-scanner Logo" src="./img/graham-scanner-dark.png" width="700">
+    <img alt="graham-scanner Logo" src="./img/graham-scanner.png" width="700">
   </picture>
 </div>
 
