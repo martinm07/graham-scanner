@@ -1,7 +1,9 @@
-# Graham Scan
-
-![graham-scanner Logo](./img/graham-scanner-dark.png#gh-dark-mode-only)
-![graham-scanner Logo](./img/graham-scanner.png#gh-light-mode-only)
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./img/graham-scanner-dark.png">
+    <img alt="graham-scanner Logo" src="./img/graham-scanner-dark.png" width="700">
+  </picture>
+</div>
 
 Implements Graham's Scan for finding the convex hull of a set of 2D vertices.
 
