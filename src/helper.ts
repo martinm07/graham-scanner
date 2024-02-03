@@ -50,11 +50,12 @@ export function factorial(n: number) {
   return final;
 }
 
-export function permute<T>(array: T[]): T[][] {
+export function permute<T>(array: T[], max: number = 1000): T[][] {
   const final = Array(factorial(array.length));
   let index = 0;
   // https://stackoverflow.com/a/20871714/11493659
   const permute = (arr: T[], m: T[] = []) => {
+    if (index >= max) return;
     if (arr.length === 0) {
       final[index++] = m;
     } else {
@@ -66,5 +67,5 @@ export function permute<T>(array: T[]): T[][] {
     }
   };
   permute(array);
-  return final;
+  return final.slice(0, max);
 }

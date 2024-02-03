@@ -70,6 +70,16 @@ describe("generateHull", () => {
     }
   });
 
+  it("doesn't augment input and is consistent", () => {
+    const input = arrayToVertices([0.1, 1.1, 1.1, 0.1, 0.2, 0.3]);
+    const copy = arrayToVertices([0.1, 1.1, 1.1, 0.1, 0.2, 0.3]);
+    scan.setVertices(input);
+    const hull1 = scan.generateHull();
+    expect(input).toEqual(copy);
+    const hull2 = scan.generateHull();
+    expect(hull1).toEqual(hull2);
+  });
+
   it("chooses the lowest y as starting hull vertex", () => {
     scan.setVertices(arrayToVertices([-10, 0, 3, -1.4]));
     expect(vertToArray(scan.generateHull()[0])).toEqual([3, -1.4]);
@@ -122,6 +132,32 @@ describe("generateHull", () => {
         [-1, -1, 1, -1, 1, 1, -1, 1],
         [-1, -1, 1, -1, 1, 1, -1, 1],
         [-2.6, 0.8, 8, 3.4, 2.54, 12, -12.3, 7.2],
+      ]
+    )) {
+      scan.setVertices(arrayToVertices(<number[]>input));
+      expect(vertsToFlArray(scan.generateHull())).toEqual(expected);
+    }
+  });
+
+  it("ignores duplicate vertices", () => {
+    const input = [-2, -2, -2, -2, 1, 1, -5, 0, -5, 0, -5, 0];
+    const expected = [-2, -2, 1, 1, -5, 0];
+    scan.setVertices(arrayToVertices(input));
+    expect(vertsToFlArray(scan.generateHull())).toEqual(expected);
+  });
+
+  it("ignores NaN, undefined, null and Infinity values", () => {
+    // prettier-ignore
+    for (const [input, expected] of zip(
+      [
+        [100, 150, 200, 130, 220, 129, undefined, undefined, NaN, NaN, 10, NaN],
+        [NaN, 10, 100, 150, undefined, undefined, 200, 130, 220, 129],
+        [NaN, 10, null, 0, undefined, undefined]
+      ],
+      [
+        [220, 129, 100, 150, 200, 130],
+        [220, 129, 100, 150, 200, 130],
+        []
       ]
     )) {
       scan.setVertices(arrayToVertices(<number[]>input));
@@ -236,6 +272,71 @@ describe("generateHull", () => {
     )) {
       scan.setVertices(arrayToVertices(<number[]>input));
       expect(vertsToFlArray(scan.generateHull())).toEqual(expected);
+    }
+  });
+});
+
+describe("generateHull with kwargs", () => {
+  const scan = new GrahamScan();
+
+  it("includes collinear vertices", () => {
+    // prettier-ignore
+    for (const [input, expected] of zip(
+      [
+        [11.1,-0.3, -11.111,-0.3, -0.0055,4, 1.2,-0.3, -8.6344735,0.6589],
+        [-3.83,1.36, 2,-2.4, 1,1, -2,-0.27, 1.294,0, 0,-1.335, -2.6222,0.2842, 0.9517,1.0036],
+        [-3.83,1.36, 2,-2.4, 1,1, -2,-0.27, 1.294,0, 0,-1.335, -2.6222,0.2842, 0.9517,1.0036, -3.281,0.871, -1.27,0.73, 0.6,-0.6],
+      ],
+      [
+        [-11.111,-0.3, 1.2,-0.3, 11.1,-0.3, -0.0055,4, -8.6344735,0.6589],
+        [2,-2.4, 1.294,0, 1,1, 0.9517,1.0036, -3.83,1.36, -2.6222,0.2842, -2,-0.27, 0,-1.335],
+        [2,-2.4, 1.294,0, 1,1, 0.9517,1.0036, -3.83,1.36, -3.281,0.871, -2.6222,0.2842, -2,-0.27, 0,-1.335],
+      ]
+    )) {
+      for (const perm of permute(arrayToVertices(<number[]>input), 1000)) {
+        scan.setVertices(perm);
+        expect(vertsToFlArray(scan.generateHull({ includeCollinearVerts: true }))).toEqual(expected);
+      }
+    }
+  });
+
+  it("walks clockwise instead of counterclockwise", () => {
+    // prettier-ignore
+    for (const [input, expected] of zip(
+      [
+        [11.1, -0.3, -11.111, -0.3, 2, 1.2, -0.0055, 4, 1.2, -0.3],
+        [-2, -2, 2, -2.4, 2, 1, 1.98, 5, -1, -1.3, 1, 0],
+        [-3.83, 1.36, 2, -2.4, 1, 1, -2, -0.27, 1.294, 0, 0, -1.335, -2.6222, 0.2842, 0.9517, 1.0036],
+      ],
+      [
+        [-11.111, -0.3, -0.0055, 4, 11.1, -0.3],
+        [2, -2.4, -2, -2, 1.98, 5, 2, 1],
+        [2, -2.4, -2, -0.27, -3.83, 1.36, 1, 1],
+      ]
+    )) {
+      scan.setVertices(arrayToVertices(<number[]>input));
+      expect(vertsToFlArray(scan.generateHull({ walkDirection: "cw" }))).toEqual(expected);
+    }
+  });
+
+  it("includes collinear vertices AND walks clockwise", () => {
+    // prettier-ignore
+    for (const [input, expected] of zip(
+      [
+        [11.1,-0.3, -11.111,-0.3, -0.0055,4, 1.2,-0.3, -8.6344735,0.6589],
+        [-3.83,1.36, 2,-2.4, 1,1, -2,-0.27, 1.294,0, 0,-1.335, -2.6222,0.2842, 0.9517,1.0036],
+        [-3.83,1.36, 2,-2.4, 1,1, -2,-0.27, 1.294,0, 0,-1.335, -2.6222,0.2842, 0.9517,1.0036, -3.281,0.871, -1.27,0.73, 0.6,-0.6],
+      ],
+      [
+        [-11.111,-0.3, -8.6344735,0.6589, -0.0055,4, 11.1,-0.3, 1.2,-0.3],
+        [2,-2.4, 0,-1.335, -2,-0.27, -2.6222,0.2842, -3.83,1.36, 0.9517,1.0036, 1,1, 1.294,0],
+        [2,-2.4, 0,-1.335, -2,-0.27, -2.6222,0.2842, -3.281,0.871, -3.83,1.36, 0.9517,1.0036, 1,1, 1.294,0],
+      ]
+    )) {
+      for (const perm of permute(arrayToVertices(<number[]>input), 1000)) {
+        scan.setVertices(perm);
+        expect(vertsToFlArray(scan.generateHull({ includeCollinearVerts: true, walkDirection: "cw" }))).toEqual(expected);
+      }
     }
   });
 });

@@ -1,6 +1,6 @@
 {
   "name": "graham-scanner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/martinm07/graham-scanner"
@@ -9,6 +9,15 @@
     "email": "martin.github07@gmail.com",
     "name": "Martin Molnar"
   },
+  "bugs": {
+    "url": "https://github.com/martinm07/graham-scanner/issues"
+  },
+  "keywords": [
+    "Graham",
+    "scan",
+    "convex",
+    "hull"
+  ],
   "type": "module",
   "files": [
     "dist"
